@@ -4,7 +4,7 @@ import { PersonajeModel } from '../collections/Personaje.ts';
 export const getAllPersonajes = async (req: Request, res: Response) => {
     const personajes = await PersonajeModel.find({}).exec();
     if( personajes.length < 1){
-        res.status(404).send("No existen productos");
+        res.status(404).send("Error 404: No existen personajes");
         return;
     }
     res.status(200).send(personajes);

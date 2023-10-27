@@ -10,5 +10,5 @@ export const getPersonaje = async(req:Request, res:Response) => {
         return;
     }
 
-    res.statis(200).send(personaje);
+    res.status(200).send(personaje);
 }
